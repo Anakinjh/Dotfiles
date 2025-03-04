@@ -1,0 +1,73 @@
+
+* {
+    background: #121217;
+    foreground: #bbc8ca;
+    border-color: #373b41;
+    separatorcolor: #373b41;
+    selected-normal-background: #cc6666;
+    selected-normal-foreground: #121217;
+    urgent-background: #a8c97e;
+    urgent-foreground: #bbc8ca;
+    active-background: #5fb3b3;
+    active-foreground: #bbc8ca;
+}
+
+window {
+    location: east;
+    anchor: east;
+    fullscreen: false;
+    width: 30%;
+    padding: 10px;
+    border: 2px solid @border-color;
+}
+
+listview {
+    fixed-height: 0;
+    lines: 10;
+    padding: 5px;
+    border: 1px solid @separatorcolor;
+    separator: dash;
+}
+
+element {
+    padding: 5px;
+}
+
+element.normal.normal {
+    background-color: @background;
+    text-color: @foreground;
+}
+
+element.selected.normal {
+    background-color: @selected-normal-background;
+    text-color: @selected-normal-foreground;
+}
+
+element.urgent.normal {
+    background-color: @urgent-background;
+    text-color: @urgent-foreground;
+}
+
+element.active.normal {
+    background-color: @active-background;
+    text-color: @active-foreground;
+}
+
+inputbar {
+    children: [ prompt, entry, case-indicator ];
+    padding: 5px;
+    spacing: 5px;
+    border: 1px solid @separatorcolor;
+}
+
+prompt {
+    text-color: @foreground;
+}
+
+entry {
+    text-color: @foreground;
+}
+
+case-indicator {
+    text-color: @foreground;
+}
